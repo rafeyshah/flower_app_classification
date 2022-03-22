@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
                                         child: Column(
                                           children: <Widget>[
                                             Image.asset('assets/flower.png'),
-                                            SizedBox(height: 60),
+                                            SizedBox(height: 40),
                                           ],
                                         ),
                                       )
@@ -155,6 +155,71 @@ class _HomeState extends State<Home> {
                                                       fontSize: 20))
                                               : Container(),
                                           SizedBox(height: 30),
+                                          Container(
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width,
+                                              child: Column(
+                                                children: <Widget>[
+                                                  GestureDetector(
+                                                    onTap: pickImage,
+                                                    child: Container(
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width -
+                                                              180,
+                                                      alignment:
+                                                          Alignment.center,
+                                                      padding:
+                                                          EdgeInsets.symmetric(
+                                                              horizontal: 24,
+                                                              vertical: 17),
+                                                      decoration: BoxDecoration(
+                                                          color:
+                                                              Color(0xFF56ab2f),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(6)),
+                                                      child: Text(
+                                                        'Take a photo',
+                                                        style: TextStyle(
+                                                            color: Colors.white,
+                                                            fontSize: 18),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(height: 5),
+                                                  GestureDetector(
+                                                    onTap: pickImage,
+                                                    child: Container(
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width -
+                                                              180,
+                                                      alignment:
+                                                          Alignment.center,
+                                                      padding:
+                                                          EdgeInsets.symmetric(
+                                                              horizontal: 24,
+                                                              vertical: 17),
+                                                      decoration: BoxDecoration(
+                                                          color:
+                                                              Color(0xFF56ab2f),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(6)),
+                                                      child: Text(
+                                                        'Camera Roll',
+                                                        style: TextStyle(
+                                                            color: Colors.white,
+                                                            fontSize: 18),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ))
                                         ],
                                       ))),
                           )
